@@ -111,13 +111,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ result: demo });
   }
 
-  let body: AnalysisRequest;
-  try {
-    body = await request.json();
-  } catch {
-    return NextResponse.json({ error: "Invalid JSON payload." }, { status: 400 });
-  }
-
   const messages = buildAssistantMessages(body);
   const endpoint = useAzure && azureEndpoint
     ? `${azureEndpoint.replace(/\/$/, "")}/openai/deployments/${azureModel}/chat/completions?api-version=2024-12-01`
