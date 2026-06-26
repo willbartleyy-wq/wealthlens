@@ -31,6 +31,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to publish WealthLens as a shareable website is to deploy it on Vercel.
+
+1. Push this repository to GitHub.
+2. Go to [Vercel New Project](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+3. Import the GitHub repository and deploy.
+4. Add the environment variables below in the Vercel dashboard, if you want real AI analysis.
+
+### Environment variables
+
+- `OPENAI_API_KEY` — required for OpenAI-based assistant responses.
+- `OPENAI_MODEL` — optional, defaults to `gpt-4o-mini`.
+- `AZURE_OPENAI_ENDPOINT` — optional, if using Azure OpenAI.
+- `AZURE_OPENAI_KEY` — optional, if using Azure OpenAI.
+- `AZURE_OPENAI_MODEL` — optional, defaults to `gpt-4o-mini`.
+
+If no API key is configured, the site will still run in demo mode and show placeholder assistant results so you can share the app as a working website.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
